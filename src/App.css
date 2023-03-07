@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -30,9 +31,9 @@
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg) scale(100%);
+    transform: rotate(0deg) scale(0%) translateX(-200px);
   }
   to {
-    transform: rotate(360deg) scale(150%);
+    transform: rotate(360deg) scale(200%) translateX(100px);
   }
 }
