@@ -1,12 +1,17 @@
-import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
-    <div className="App">
-      <h1> Algebra svi znamo</h1>
-      <p> React</p>
-    </div>
+    <>
+      <h1>My first app</h1>
+      <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
+        {!isLoggedIn ? "Login" : "Logout"}
+      </button>
+      <p>{isLoggedIn ? "Bok Danijel, ulogiran si" : "You are not logged in"}</p>
+    </>
   );
 }
 
