@@ -12,9 +12,8 @@ function App() {
         surname="Hrgić"
         cardNumber={25656354565156}
         cvc={552}
-      >
-        ZABA
-      </Card>
+        isErste={true}
+      ></Card>
     </>
   );
   // const [isLoggedIn, setIsLoggedIn] = useState(false);

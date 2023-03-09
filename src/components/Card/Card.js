@@ -2,15 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Card.scss";
 
-const Card = ({ name, surname, cardNumber, cvc, children }) => {
+const Card = ({ name, surname, cardNumber, cvc, isErste = false }) => {
   return (
-    <div className="Card Card_erste">
+    <div className={`Card ${isErste ? "Card_erste" : ""}`}>
       <p className="Card-Holder">
         {name} {surname}
       </p>
       <p className="Card-Number"> {cardNumber}</p>
       <p className="Card-Cvc">{cvc}</p>
-      {children}
+      {isErste ? "Erste" : "ZABA"}
     </div>
   );
 };
@@ -20,7 +20,7 @@ Card.propTypes = {
   surname: PropTypes.string,
   cardNumber: PropTypes.number,
   cvc: PropTypes.number,
-  children: PropTypes.node,
+  isErste: PropTypes.bool,
 };
 
 export default Card;
